@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JSON data to HTML table</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="table-responsive">
+        <h1>Patient Data Table</h1>
+        <br>
+        <table class="table table-bordered table-striped" id="magic">
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+  $(document).ready(function () {
+    function buildTable(){
+      $.getJSON("https://znq13g1ze3.execute-api.us-east-1.amazonaws.com/Prod/",
+      function (json) {
+          var out = '<tr><th>Patient</th><th>Temperature</th><th>BloodPressure</th><th>Breath Rate</th><th>Heart Rate</th><th>Date & Time</th></tr>'
+          for (var i = 0; i < json.length; i++) {
+
+              out += "<tr>"
+              out += "<td>" + json[i].Patient + "</td>";
+              out +="<td>" + json[i].Temperature + "</td>";
+              out += "<td>" + json[i].BloodPressure[0] + "/"+ json[i].BloodPressure[1] + "</td>";
+              out += "<td>" + json[i].HeartRate + "</td>";
+              out += "<td>" + json[i].BreathRate + "</td>";
+              out += "<td>" + json[i].dateTime + "</td>";
+              out += "</tr>"
+          }
+
+          document.getElementById("magic").innerHTML = out;
+      });
+    };
+    buildTable();
+    setInterval(buildTable, 1000);
+  });
+</script>
