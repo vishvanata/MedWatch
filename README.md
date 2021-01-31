@@ -5,3 +5,4 @@ I designed and developed this personal project using AWS technologies. Some of t
 
 After running the demo script which simulated medical sensors, you can see the patient dashboard update as data is recieved in real-time. Just head over to this static webpage, hosted in an S3 bucket: https://patientmonitoringvishva2021.s3.amazonaws.com/patientMonitor.html
 
+Send questions to "vishvanata@gatech.edu".
