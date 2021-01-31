@@ -1,5 +1,5 @@
 # MedWatch
-MedWatch is a remote patient monitoring system. 
+MedWatch is a remote patient monitoring system. I started this personal project as a participant in the 2021 Yale CBIT Hackathon.
 
 I designed and developed this personal project using AWS technologies. Some of the AWS services I used are AWS IoT, Lambda, API Gateway, Kinesis Firehose, S3, and QuickSight to handle, store, and visualize incoming medical sensor data which was simulated using AWS Boto3 Python package and AWS CLI. Throughout this project I used S3 lifecycle policies to handle archiving of data and IAM roles to allocate just enough permissions for AWS resources. 
 
