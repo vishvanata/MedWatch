@@ -7,6 +7,6 @@ I provisioned all resources from the AWS Management console. As a best practice,
 
 "sbs.py" is the Python script that utilizes AWS Boto3 and AWS CLI to simulate IoT data being sent to AWS IoT. To run it you'll need to download AWS CLI and then configure your AWS user. 
 
-Here is the sample the patient dashboard which is updated as data is recieved in real-time. Head over to this static webpage, hosted in an S3 bucket, to see how the webpage looks: https://patientmonitoringvishva2021.s3.amazonaws.com/patientMonitor.html.  You'd need to copy-paste the HTML and upload it in your own S3 bucket associated with your AWS configurations and Lambda functions for this to work on your end. 
+Here is the sample the patient dashboard which is updated as data is recieved in real-time. Head over to this static webpage, hosted in an S3 bucket, to see how the webpage looks: https://patientmonitoringvishva2021.s3.amazonaws.com/patientMonitor.html.  You'd need to copy-paste the HTML and upload it in your own S3 bucket associated with your AWS configurations and API Gateway configurations to work. You'd need your own Lambda functions and DynamoDB table to simulate IoT medical sensors in real-time, since currently what's being shown on the table is a the result of a GET request to my DynamoDB table. 
 
 Send questions to "vishvanata@gatech.edu".
