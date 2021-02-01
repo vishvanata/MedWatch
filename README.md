@@ -5,6 +5,8 @@ I designed and developed this personal project using AWS technologies. Some of t
 
 I provisioned all resources from the AWS Management console. As a best practice, I created a new IAM user with admin access privileges and provisioned resources from there instead of doing everything from the root user account. 
 
-After running the demo script which simulated medical sensors, you can see the patient dashboard update as data is recieved in real-time. Just head over to this static webpage, hosted in an S3 bucket: https://patientmonitoringvishva2021.s3.amazonaws.com/patientMonitor.html
+"sbs.py" is the Python script that utilizes AWS Boto3 and AWS CLI to simulate IoT data being sent to AWS IoT. To run it you'll need to download AWS CLI and then configure your AWS user. 
+
+Here is the sample the patient dashboard which is updated as data is recieved in real-time. Head over to this static webpage, hosted in an S3 bucket, to see how the webpage looks: https://patientmonitoringvishva2021.s3.amazonaws.com/patientMonitor.html.  You'd need to copy-paste the HTML and upload it in your own S3 bucket associated with your AWS configurations and Lambda functions for this to work on your end. 
 
 Send questions to "vishvanata@gatech.edu".
